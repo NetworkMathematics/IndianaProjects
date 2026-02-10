@@ -6,7 +6,7 @@ We have preprints:
 * [Extracting Mathematical Concepts with Large Language Models](https://arxiv.org/pdf/2309.00642)
 
 Our data:
-* [TAC](http://www.tac.mta.ca/tac/) [abstracts corpus](https://github.com/ToposInstitute/tac-corpus) 1995-2020 at Topos Institute
+* [TAC](http://www.tac.mta.ca/tac/) [abstracts corpus](https://github.com/ToposInstitute/tac-corpus) (1995-2020) at Topos Institute
 * [nLab]() corpus
 * MathNLI corpora
 
