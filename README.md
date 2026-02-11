@@ -1,8 +1,8 @@
 A place to organize our research.
 
 We have preprints:
-* [Math Natural Language Inference: This Should Be Easy!](https://aclanthology.org/2025.starsem-1.14.pdf)
-* [KnowTeX: Visualizing Mathematical Dependencies](https://arxiv.org/pdf/2601.15294)
+* [Math Natural Language Inference: This Should Be Easy!](https://aclanthology.org/2025.starsem-1.14.pdf) presented  at 14th Joint Conference on Lexical and Computational Semantics (*SEM 2025), Nov 2025.
+* [KnowTeX: Visualizing Mathematical Dependencies](https://arxiv.org/pdf/2601.15294) submitted.
 * [Extracting Mathematical Concepts with Large Language Models](https://arxiv.org/pdf/2309.00642) presented at 14th MathUI Workshop 2023, CICM2023.
 
 Our data:
