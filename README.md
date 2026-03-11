@@ -25,4 +25,5 @@ or Lessons from Large Language Models and Human-Curated Resources
 
 We're completing a database of terms of Category Theory, extracted from the TAC corpus above.
 
-Our data is in the repo.
+Our data is in the spreadsheets https://docs.google.com/spreadsheets/d/1jLzuvuaLIcRTIQPwQ65fL3o9gzasplJ52eEUFJhhMSk/edit?gid=105714284#gid=105714284 and
+ https://docs.google.com/spreadsheets/d/1yy3NjhP0mj75ws0k3qnCbFCI-giSHCqVwUW_8CGblEQ/edit?usp=sharing
