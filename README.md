@@ -18,12 +18,11 @@ Our prototype for annotation:
 
 [MathAnnotator](https://gaoq111.github.io/math_concept_annotation/)
 
------------------------------------
 
-## New project: Toward a Machine-Readable Database of Categorical Terms<\h3>
+## Toward a Machine-Readable Database of Categorical Terms
 
-subtitle: Lessons from Large Language Models and Human-Curated Resources
+or Lessons from Large Language Models and Human-Curated Resources
 
 We're completing a database of terms of Category Theory, extracted from the TAC corpus above.
 
-Our data is in the repo
+Our data is in the repo.
