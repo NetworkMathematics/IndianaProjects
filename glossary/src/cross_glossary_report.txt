@@ -1,0 +1,413 @@
+cross-glossary deduplication analysis
+
+total terms in dataset:       4541
+unique normalized terms:      3719
+single-glossary terms:        3235
+multi-glossary terms:         484
+  spanning 2 glossaries:      330
+  spanning 3+ glossaries:     154
+
+relationship classification:
+  complementary          356
+  overlapping             56
+  stub_vs_full            54
+  identical               12
+  all_stubs                6
+
+complementary definitions (356 terms)
+genuinely different definitions across glossaries.
+
+  abc conjecture
+  areas: number_theory
+    [arithmetic and diophantine geometry]
+      The abc conjecture of Masser and Oesterlé attempts to state as much as possible about repeated prime factors in an equat
+    [number theory]
+      The abc conjecture says that for all ε > 0, there are only finitely many coprime positive integers a, b, and c satisfyin
+
+  abelian
+  areas: analysis, geometry_topology, foundations, algebra
+    [Lie groups and Lie algebras]
+      An abelian Lie group is a Lie group that is an abelian group.
+    [algebraic geometry]
+      An abelian variety is a complete group variety. For example, consider the complex variety $\mathbb{C}^n/\mathbb{Z}^{2n} 
+    [category theory]
+      A category is abelian if it has a zero object, it has all pullbacks and pushouts, and all monomorphisms and epimorphisms
+    [functional analysis]
+      Synonymous with "commutative"; e.g., an abelian Banach algebra means a commutative Banach algebra.
+
+  abelian group
+  areas: geometry_topology, algebra
+    [classical algebraic geometry]
+      An archaic name for the symplectic group.
+    [group theory]
+      A group (G, •) is abelian if • is commutative, i.e. g • h = h • g for all g, h ∈ G. Likewise, a group is nonabelian if t
+
+  absolute
+  areas: geometry_topology, foundations, algebra
+    [classical algebraic geometry]
+      A fixed choice of something in projective space, used to construct some other geometry from projective geometry. For exa
+    [invariant theory]
+      The absolute invariant is essentially the j-invariant of an elliptic curve.
+    [set theory]
+      A statement is called absolute if its truth in some model implies its truth in certain related models
+
+  acyclic
+  areas: discrete_applied
+    [graph theory]
+      A graph is acyclic if it has no cycles. An undirected acyclic graph is the same thing as a forest. An acyclic directed g
+    [order theory]
+      A binary relation is acyclic if it contains no "cycles": equivalently, its transitive closure is antisymmetric.
+
+  adams
+  areas: geometry_topology, algebra
+    [algebraic topology]
+      John Frank Adams.
+    [representation theory]
+      Adams operations.
+
+  adjoint
+  areas: analysis, geometry_topology, algebra, discrete_applied
+    [Lie groups and Lie algebras]
+      An adjoint representation of a Lie group: ::$\operatorname{Ad} : G \to \operatorname{GL}(\mathfrak g)$ :such that $\oper
+    [classical algebraic geometry]
+      If C is a curve, an adjoint of C is a curve such that any point of C of multiplicity r has multiplicity at least r–1 on 
+    [functional analysis]
+      The adjoint of a bounded linear operator $T: H_1 \to H_2$ between Hilbert spaces is the bounded linear operator $T^* : H
+    [order theory] [stub]
+      See Galois connection.
+    [representation theory]
+      The adjoint representation of a Lie group G is the representation given by the adjoint action of G on the Lie algebra of
+
+  admissible
+  areas: foundations, algebra
+    [representation theory]
+      A representation of a real reductive group is called admissible if (1) a maximal compact subgroup K acts as unitary oper
+    [set theory]
+      An admissible set is a model of Kripke–Platek set theory, and an admissible ordinal is an ordinal α such that Lα is an a
+
+  alexandrov topology
+  areas: geometry_topology, discrete_applied
+    [general topology]
+      The topology of a space X is an Alexandrov topology (or is finitely generated) if arbitrary intersections of open sets i
+    [order theory]
+      For a preordered set P, any upper set O is Alexandrov-open. Inversely, a topology is Alexandrov if any intersection of o
+
+  algebraic geometry
+  areas: cross-cutting, geometry_topology
+    [algebraic geometry]
+      Algebraic geometry is a branch of mathematics that studies solutions to algebraic equations.
+    [areas of mathematics]
+      a branch that combines techniques from abstract algebra with the language and problems of geometry. Fundamentally, it st
+
+  algebraic number theory
+  areas: cross-cutting, number_theory
+    [areas of mathematics]
+      The part of number theory devoted to the use of algebraic methods, mainly those of commutative algebra, for the study of
+    [number theory]
+      Algebraic number theory
+
+  alternating
+  areas: algebra, discrete_applied
+    [graph theory]
+      In a graph with a matching, an alternating path is a path whose edges alternate between matched and unmatched edges. An 
+    [representation theory]
+      The alternating square of a representation V is a subrepresentation $\operatorname{Alt}^2(V)$ of the second tensor power
+
+  analytic
+  areas: foundations, algebra
+    [Lie groups and Lie algebras]
+      An analytic subgroup
+    [commutative algebra]
+      The analytic spread of an ideal of a local ring is the Krull dimension of the fiber at the special point of the local ri
+    [set theory]
+      An analytic set is the continuous image of a Polish space. (This is not the same as an analytical set)
+
+  analytic number theory
+  areas: cross-cutting, number_theory
+    [areas of mathematics]
+      part of analysis that studies how well functions can be approximated by simpler ones (such as polynomials or trigonometr
+    [number theory]
+      Analytic number theory
+
+  annihilator
+  areas: algebra
+    [commutative algebra]
+      The annihilator of a subset of a module is the ideal of elements whose product with any element of the subset is 0.
+    [invariant theory]
+      An annihilator is a differential operator representing an element of a Lie algebra, so that invariants of a group are ki
+    [module theory]
+      The annihilator of a left $R$-module $M$ is the set $\textrm{Ann}(M) := \{ r \in R ~|~ rm = 0 \, \forall m \in M \}$ . I
+
+  annulus
+  areas: analysis, geometry_topology
+    [algebraic topology]
+      The annulus theorem.
+    [calculus]
+      A ring-shaped object, a region bounded by two concentric circles.
+
+  antichain
+  areas: foundations, discrete_applied
+    [graph theory]
+      In a directed acyclic graph, a subset S of vertices that are pairwise incomparable, i.e., for any $x \leq y $ in S, ther
+    [order theory]
+      An antichain is a poset in which no two elements are comparable, i.e., there are no two distinct elements x and y such t
+    [set theory]
+      An antichain is a set of pairwise incompatible elements of a poset
+
+  arakelov geometry
+  areas: cross-cutting, geometry_topology
+    [algebraic geometry]
+      Algebraic geometry over the compactification of Spec of the ring of rational integers $\mathbb{Z}$. See Arakelov geometr
+    [areas of mathematics]
+      also known as Arakelov theory
+
+  arakelov theory
+  areas: cross-cutting, number_theory
+    [areas of mathematics]
+      an approach to Diophantine geometry used to study Diophantine equations in higher dimensions (using techniques from alge
+    [arithmetic and diophantine geometry]
+      Arakelov theory is an approach to arithmetic geometry that explicitly includes the 'infinite primes'.
+
+  arithmetic
+  areas: cross-cutting, geometry_topology, foundations
+    [algebraic geometry]
+      The arithmetic scheme is a scheme over $\operatorname{Spec}(\mathbf{Z})$, the prime spectrum of the ring of rational int
+    [areas of mathematics]
+      Also known as elementary arithmetic, the methods and rules for computing with addition, subtraction, multiplication and 
+    [set theory]
+      The ordinal arithmetic is arithmetic on ordinal numbers
+
+  arithmetic genus
+  areas: geometry_topology
+    [algebraic geometry]
+      The arithmetic genus of a projective variety X of dimension r is $(-1)^r (\chi(\mathcal{O}_X) - 1)$.
+    [classical algebraic geometry]
+      The arithmetic genus of a variety is a variation of the Euler characteristic of the trivial line bundle; see Hodge numbe
+
+  arithmetic geometry
+  areas: cross-cutting, number_theory
+    [areas of mathematics]
+      The use of algebraic geometry and more specially scheme theory for solving problems of number theory.
+    [arithmetic and diophantine geometry]
+      Arithmetic geometry can be defined as the study of schemes of finite type over the spectrum of the ring of integers. It 
+
+  artinian
+  areas: geometry_topology, algebra
+    [algebraic geometry]
+      0-dimensional and Noetherian. The definition applies both to a scheme and a ring.
+    [commutative algebra]
+      Emil Artin
+    [module theory]
+      An Artinian module is a module in which every decreasing chain of submodules becomes stationary after finitely many step
+    [ring theory]
+      A left Artinian ring is a ring satisfying the descending chain condition for left ideals; a right Artinian ring is one s
+
+  associated
+  areas: geometry_topology, algebra
+    [classical algebraic geometry]
+      An associated curve is the image of a projective curve in a Grassmannian, given by taking the tangent lines, or osculati
+    [commutative algebra]
+      An associated prime of a module M over a ring R is a prime ideal p such that M has a submodule isomorphic to R/p.
+
+  atom
+  areas: foundations, discrete_applied
+    [order theory]
+      An atom in a poset P with least element 0, is an element that is minimal among all elements that are unequal to 0.
+    [set theory]
+      An urelement, something that is not a set but allowed to be an element of a set
+
+  atomic
+  areas: foundations, discrete_applied
+    [order theory]
+      An atomic poset P with least element 0 is one in which, for every non-zero element x of P, there is an atom a of P with 
+    [set theory]
+      An atomic formula (in set theory) is one of the form x=y or x∈y
+
+  azumaya
+  areas: algebra
+    [module theory]
+      Azumaya's theorem says that two decompositions into modules with local endomorphism rings are equivalent.
+    [ring theory]
+      An Azumaya algebra is a generalization of a central simple algebra to a non-field base ring.
+
+  b
+  areas: foundations, algebra
+    [Lie groups and Lie algebras]
+      (B, N) pair
+    [set theory]
+      A Boolean algebra
+
+  baire
+  areas: analysis, foundations
+    [functional analysis]
+      The Baire category theorem states that a complete metric space is a Baire space; if $U_i$ is a sequence of open dense su
+    [set theory]
+      René-Louis Baire
+
+  balanced
+  areas: analysis, foundations, algebra, discrete_applied
+    [category theory]
+      A category is balanced if every bimorphism (i.e., both mono and epi) is an isomorphism.
+    [functional analysis]
+      A subset S of a vector space over real or complex numbers is balanced if $\lambda S \subset S$ for every scalar $\lambda
+    [graph theory]
+      A bipartite or multipartite graph is balanced if each two subsets of its vertex partition have sizes within one of each 
+    [module theory]
+      balanced module
+
+near-identical definitions (12 terms)
+redundant entries that could be merged.
+  affine                                    sim=0.99  [Lie groups and Lie algebras, algebraic geometry, classical algebraic geometry]
+  artin                                     sim=0.95  [commutative algebra, number theory, representation theory]
+  decic                                     sim=1.00  [classical algebraic geometry, invariant theory]
+  decimic                                   sim=1.00  [classical algebraic geometry, invariant theory]
+  eisenstein                                sim=1.00  [commutative algebra, number theory, representation theory]
+  facultative                               sim=1.00  [classical algebraic geometry, invariant theory]
+  form                                      sim=0.86  [classical algebraic geometry, invariant theory]
+  hilbert                                   sim=1.00  [commutative algebra, functional analysis, invariant theory, module theory, set theory]
+  kirillov                                  sim=0.93  [Lie groups and Lie algebras, representation theory]
+  octic                                     sim=1.00  [classical algebraic geometry, invariant theory]
+  septic                                    sim=1.00  [classical algebraic geometry, invariant theory]
+  septimic                                  sim=1.00  [classical algebraic geometry, invariant theory]
+
+overlapping definitions (56 terms)
+partial overlap; may capture different aspects.
+
+  automorphism  (sim=0.76)
+    [Lie groups and Lie algebras] An automorphism of a Lie algebra is a linear automorphism preserving the bracket.
+    [graph theory] A graph automorphism is a symmetry of a graph, an isomorphism from the graph to itself.
+    [group theory] An automorphism of a group is an isomorphism of the group to itself.
+    [module theory] An automorphism is an endomorphism that is also an isomorphism.
+    [ring theory] A ring automorphism is a ring isomorphism between the same ring; in other words, it is a unit elemen
+
+  bidegree  (sim=0.73)
+    [classical algebraic geometry] A pair of integers giving the degrees of a bihomogeneous polynomial in two sets of variables
+    [invariant theory] An ordered pair of integers, giving the degrees of a form relative to two sets of variables.
+
+  binary  (sim=0.70)
+    [classical algebraic geometry] Depending on two variables, as in binary form
+    [invariant theory] Depending on 2 variables. Same as bivariate.
+    [mathematical jargon] A binary relation is a set of ordered pairs; an element x is said to be related to another element y
+
+  borel  (sim=0.52)
+    [Lie groups and Lie algebras] Armand Borel (1923 – 2003), a Swiss mathematician
+    [algebraic topology] Borel conjecture.
+    [functional analysis] Borel functional calculus
+    [real and complex analysis] A Borel measure is a measure whose domain is the Borel σ-algebra.
+    [set theory] Émile Borel
+
+  catalecticant  (sim=0.55)
+    [classical algebraic geometry] A catalecticant is an invariant of a binary form of degree 2n that vanishes when the form is a sum o
+    [invariant theory] An invariant vanishing on forms that are the sum of an unusually small number of powers of linear fo
+
+  category  (sim=0.71)
+    [category theory] A category consists of the following data #A class of objects, #For each pair of objects X, Y, a set
+    [module theory] The category of modules over a ring is the category where the objects are all the (say) left modules
+    [ring theory] The category of rings is a category where the objects are (all) the rings and where the morphisms ar
+    [set theory] A set of first category is the same as a meager set: a set that is the union of a countable number o
+
+  center  (sim=0.55)
+    [Lie groups and Lie algebras] The centralizer of a subset $X$ of a Lie algebra $\mathfrak{g}$ is <math>C_{\mathfrak{g
+    [classical algebraic geometry] A special point associated with some geometric object
+    [commutative algebra] The center of a valuation (or place) is the ideal of elements of positive order.
+    [graph theory] The center of a graph is the set of vertices of minimum eccentricity.
+
+  chain  (sim=0.56)
+    [commutative algebra] A strictly increasing or decreasing sequence of prime ideals.
+    [graph theory] Synonym for walk.
+    [order theory] A chain is a totally ordered set or a totally ordered subset of a poset. See also .
+    [set theory] A linearly ordered subset (of a poset)
+
+  characteristic  (sim=0.54)
+    [classical algebraic geometry] An integer associated with a projective variety, such as its degree, rank, order, class, type. In pa
+    [commutative algebra] The characteristic of a ring is a non-negative integer generating the Z-ideal of multiples of 1 that
+    [field theory] The characteristic of the field F is the smallest positive integer n such that ; here n·1 stands for
+    [invariant theory] See
+    [ring theory] The characteristic of a ring is the smallest positive integer n satisfying nx = 0 for all elements x
+
+  class function  (sim=0.75)
+    [group theory] A class function on a group G is a function that it is constant on the conjugacy classes of G.
+    [representation theory] A class function f on a group G is a function such that $f(g) = f(h g h^{-1})$; it is a function on 
+
+  class number  (sim=0.58)
+    [group theory] The class number of a group is the number of its conjugacy classes.
+    [number theory] The class number of a number field is the cardinality of the ideal class group of the field.
+
+  cohen  (sim=0.57)
+    [commutative algebra] Irvin Cohen
+    [set theory] Paul Cohen
+
+  coherent  (sim=0.53)
+    [category theory] A coherent category (for now, see https://ncatlab.org/nlab/show/coherent+category).
+    [commutative algebra] A module is called coherent if it is finitely generated and every homomorphism to it from a finitely
+    [module theory] A coherent module is a finitely generated module whose finitely generated submodules are finitely pr
+    [ring theory] A left coherent ring is a ring such that every finitely generated left ideal of it is a finitely pre
+
+  complete  (sim=0.60)
+    [category theory] A category is complete if all small limits exist.
+    [classical algebraic geometry] A linear series of divisors is called complete if it is not contained in a larger linear series.
+    [commutative algebra] A local complete intersection ring is a Noetherian local ring whose completion is the quotient of a 
+    [general topology] A metric space is complete if every Cauchy sequence converges.
+    [graph theory] A complete graph is one in which every two vertices are adjacent: all edges that could exist are pre
+    [invariant theory] A complete system of invariants is a set of generators for the ring of invariants.
+    [representation theory] “completely reducible" is another term for "semisimple".
+    [set theory] "Complete set" is an old term for "transitive set"
+
+  completion  (sim=0.51)
+    [Riemannian and metric geometry] (empty)
+    [algebraic topology] A multiplicative cohomology theory E is complex-oriented if the restriction map E2(CP∞) → E2(CP1) is
+    [commutative algebra] The completion of a module or ring M at an ideal I is the inverse limit of the modules M/InM.
+    [module theory] completion of a module
+    [order theory] A completion of a poset is an order-embedding of the poset in a complete lattice.
+
+  continuous  (sim=0.72)
+    [algebraic topology] Continuous cohomology.
+    [general topology] A function from one space to another is continuous if the preimage of every open set is open.
+    [module theory] continuous module
+    [real and complex analysis] A function $f : X \to Y$ between metric spaces $(X,d_X)$ and $(Y,d_Y)$ is continuous if for any conv
+
+  countable chain condition  (sim=0.53)
+    [general topology] A space X satisfies the countable chain condition if every family of non-empty, pairswise disjoint o
+    [set theory] The countable chain condition (ccc) for a poset states that every antichain is countable
+
+  cox ring  (sim=0.60)
+    [algebraic geometry] A generalization of a homogeneous coordinate ring. See Cox ring.
+    [commutative algebra] A Cox ring is a sort of universal homogeneous coordinate ring for a projective variety.
+
+  diameter  (sim=0.51)
+    [Riemannian and metric geometry] of a metric space is the supremum of distances between pairs of points.
+    [general topology] If (M, d) is a metric space and S is a subset of M, the diameter of S is the supremum of the distanc
+    [graph theory] The diameter of a connected graph is the maximum length of a shortest path. That is, it is the maxim
+
+  differential  (sim=0.59)
+    [calculus] The term differential is used in calculus to refer to an infinitesimal (infinitely small) change in 
+    [classical algebraic geometry] A differential of the first kind is a holomorphic 1-form.
+    [module theory] A differential graded module or dg-module is a graded module with a differential.
+    [ring theory] A differential algebra is an algebra together with a derivation.
+
+terms spanning 3+ glossaries (154 terms)
+  regular                              10x  overlapping      [Lie groups and Lie algebras, algebraic geometry, category theory, classical algebraic geometry, commutative algebra, general topology, graph theory, mathematical jargon, representation theory, set theory]
+  simple                               9x  complementary    [Lie groups and Lie algebras, algebraic geometry, algebraic topology, classical algebraic geometry, commutative algebra, graph theory, module theory, representation theory, ring theory]
+  complete                             8x  overlapping      [category theory, classical algebraic geometry, commutative algebra, general topology, graph theory, invariant theory, representation theory, set theory]
+  normal                               8x  complementary    [algebraic geometry, category theory, classical algebraic geometry, commutative algebra, functional analysis, general topology, module theory, set theory]
+  dual                                 6x  overlapping      [classical algebraic geometry, commutative algebra, functional analysis, graph theory, order theory, representation theory]
+  extension                            6x  overlapping      [Lie groups and Lie algebras, commutative algebra, module theory, order theory, ring theory, set theory]
+  finite                               6x  complementary    [algebraic geometry, category theory, commutative algebra, graph theory, mathematical jargon, module theory]
+  ideal                                6x  complementary    [Lie groups and Lie algebras, commutative algebra, number theory, order theory, ring theory, set theory]
+  invariant                            6x  complementary    [classical algebraic geometry, graph theory, invariant theory, mathematical jargon, module theory, ring theory]
+  local                                6x  complementary    [algebraic geometry, commutative algebra, graph theory, number theory, ring theory, set theory]
+  projective                           6x  overlapping      [algebraic geometry, category theory, commutative algebra, module theory, representation theory, set theory]
+  adjoint                              5x  complementary    [Lie groups and Lie algebras, classical algebraic geometry, functional analysis, order theory, representation theory]
+  automorphism                         5x  overlapping      [Lie groups and Lie algebras, graph theory, group theory, module theory, ring theory]
+  borel                                5x  overlapping      [Lie groups and Lie algebras, algebraic topology, functional analysis, real and complex analysis, set theory]
+  canonical                            5x  complementary    [algebraic geometry, classical algebraic geometry, commutative algebra, graph theory, mathematical jargon]
+  characteristic                       5x  overlapping      [classical algebraic geometry, commutative algebra, field theory, invariant theory, ring theory]
+  class                                5x  complementary    [algebraic topology, classical algebraic geometry, graph theory, invariant theory, set theory]
+  compact                              5x  complementary    [category theory, functional analysis, general topology, module theory, order theory]
+  completion                           5x  overlapping      [Riemannian and metric geometry, algebraic topology, commutative algebra, module theory, order theory]
+  connected                            5x  complementary    [algebraic geometry, category theory, commutative algebra, general topology, graph theory]
+  degree                               5x  complementary    [algebraic geometry, algebraic topology, classical algebraic geometry, graph theory, invariant theory]
+  faithful                             5x  complementary    [category theory, commutative algebra, functional analysis, module theory, representation theory]
+  genus                                5x  complementary    [algebraic geometry, algebraic topology, classical algebraic geometry, differential geometry and topology, graph theory]
+  hilbert                              5x  identical        [commutative algebra, functional analysis, invariant theory, module theory, set theory]
+  integral                             5x  complementary    [algebraic geometry, calculus, classical algebraic geometry, commutative algebra, real and complex analysis]

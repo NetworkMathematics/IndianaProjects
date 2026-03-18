@@ -1,0 +1,120 @@
+[
+  {
+    "term": "group",
+    "definition": "A group is a set together with an associative operation that admits an identity element and such that there exists an inverse for every element.",
+    "source_glossary": "Glossary of group theory",
+    "math_area": "algebra",
+    "extraction_method": "preamble",
+    "section": "preamble",
+    "definition_wikilinks": [
+      {"target": "group (mathematics)", "display": "group"},
+      {"target": "associative", "display": "associative"},
+      {"target": "identity element", "display": "identity element"},
+      {"target": "inverse element", "display": "inverse"}
+    ],
+    "notes": "primary concept of the glossary, defined in introductory paragraph"
+  },
+  {
+    "term": "field",
+    "definition": "A field is a commutative ring (F, +, *) in which 0 \u2260 1 and every nonzero element has a multiplicative inverse. In a field we thus can perform the operations addition, subtraction, multiplication, and division.",
+    "source_glossary": "Glossary of field theory",
+    "math_area": "algebra",
+    "extraction_method": "preamble",
+    "section": "preamble: definition of a field",
+    "definition_wikilinks": [
+      {"target": "field (mathematics)", "display": "field"},
+      {"target": "commutative ring", "display": "commutative ring"},
+      {"target": "abelian group", "display": "abelian group"}
+    ],
+    "notes": "explicit definition section in preamble before glossary body"
+  },
+  {
+    "term": "ring",
+    "definition": "Ring theory is the branch of mathematics in which rings are studied: that is, structures supporting both an addition and a multiplication operation.",
+    "source_glossary": "Glossary of ring theory",
+    "math_area": "algebra",
+    "extraction_method": "preamble",
+    "section": "preamble",
+    "definition_wikilinks": [
+      {"target": "ring (mathematics)", "display": "rings"},
+      {"target": "addition", "display": "addition"},
+      {"target": "multiplication", "display": "multiplication"}
+    ],
+    "notes": "implicit definition via scope statement; not a formal definition"
+  },
+  {
+    "term": "Diophantine geometry",
+    "definition": "Diophantine geometry in general is the study of algebraic varieties V over fields K that are finitely generated over their prime fields, including as of special interest number fields and finite fields, and over local fields.",
+    "source_glossary": "Glossary of arithmetic and diophantine geometry",
+    "math_area": "number_theory",
+    "extraction_method": "preamble",
+    "section": "preamble",
+    "definition_wikilinks": [
+      {"target": "Diophantine geometry", "display": "Diophantine geometry"},
+      {"target": "algebraic varieties", "display": "algebraic varieties"},
+      {"target": "number field", "display": "number fields"},
+      {"target": "finite field", "display": "finite fields"},
+      {"target": "local field", "display": "local fields"}
+    ],
+    "notes": ""
+  },
+  {
+    "term": "arithmetic geometry",
+    "definition": "Arithmetic geometry can be defined as the study of schemes of finite type over the spectrum of the ring of integers. It has also been defined as the application of the techniques of algebraic geometry to problems in number theory.",
+    "source_glossary": "Glossary of arithmetic and diophantine geometry",
+    "math_area": "number_theory",
+    "extraction_method": "preamble",
+    "section": "preamble",
+    "definition_wikilinks": [
+      {"target": "Arithmetic geometry", "display": "Arithmetic geometry"},
+      {"target": "scheme (mathematics)", "display": "schemes"},
+      {"target": "spectrum of a ring", "display": "spectrum"},
+      {"target": "ring of integers", "display": "ring of integers"},
+      {"target": "number theory", "display": "number theory"}
+    ],
+    "notes": "two competing definitions given, both merged here"
+  },
+  {
+    "term": "normal form game",
+    "definition": "A game in normal form is a function from the product of each player's strategy space to the reals for each player, assigning an allocation of payments given the tuple of strategies chosen by the players.",
+    "source_glossary": "Glossary of game theory",
+    "math_area": "discrete_applied",
+    "extraction_method": "preamble",
+    "section": "preamble: definitions of a game",
+    "definition_wikilinks": [],
+    "notes": "formal definition in preamble definitions section; original uses heavy math notation"
+  },
+  {
+    "term": "extensive form game",
+    "definition": "An extensive form game is given by a tree, where at each vertex of the tree a different player has the choice of choosing an edge. The outcome set of an extensive form game is usually the set of tree leaves.",
+    "source_glossary": "Glossary of game theory",
+    "math_area": "discrete_applied",
+    "extraction_method": "preamble",
+    "section": "preamble: definitions of a game",
+    "definition_wikilinks": [
+      {"target": "tree (graph theory)", "display": "tree"},
+      {"target": "vertex (graph theory)", "display": "vertex"}
+    ],
+    "notes": ""
+  },
+  {
+    "term": "cooperative game",
+    "definition": "A cooperative game is a game in which players are allowed to form coalitions and to enforce coalitionary discipline. A cooperative game is given by stating a value for every coalition. It is always assumed that the empty coalition gains nil.",
+    "source_glossary": "Glossary of game theory",
+    "math_area": "discrete_applied",
+    "extraction_method": "preamble",
+    "section": "preamble: definitions of a game",
+    "definition_wikilinks": [],
+    "notes": "original includes formula for coalition value function"
+  },
+  {
+    "term": "simple game",
+    "definition": "A simple game is a simplified form of a cooperative game, where the possible gain is assumed to be either 0 or 1. A simple game is a pair (N, W), where W is the list of winning coalitions capable of gaining the loot, and N is the set of players.",
+    "source_glossary": "Glossary of game theory",
+    "math_area": "discrete_applied",
+    "extraction_method": "preamble",
+    "section": "preamble: definitions of a game",
+    "definition_wikilinks": [],
+    "notes": ""
+  }
+]
