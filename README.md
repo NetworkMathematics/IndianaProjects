@@ -28,6 +28,6 @@ We're completing a database of terms of Category Theory, extracted from the TAC 
 Our data is in the spreadsheets https://docs.google.com/spreadsheets/d/1jLzuvuaLIcRTIQPwQ65fL3o9gzasplJ52eEUFJhhMSk/edit?gid=105714284#gid=105714284 and
  https://docs.google.com/spreadsheets/d/1yy3NjhP0mj75ws0k3qnCbFCI-giSHCqVwUW_8CGblEQ/edit?usp=sharing
 
- Also a static version in the directory TermsDB.
+ A static version is in the directory [TermsDB](https://github.com/NetworkMathematics/TermsDB/blob/main/README.md).
 
- Write-ups are promised.
+ 
