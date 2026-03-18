@@ -1,0 +1,58 @@
+Here is the implementation pipeline. The idea is to run offline after one network call; everything else simply reads the cached files.
+
+
+1. glossary_inventory.py returns data in raw_wikitext/
+2. extract_terms.py returns extracted_terms.json
+2.1 merge_preambles.py accounts for the definitions that live in the preamble materials of the glossary
+3. dedup_analysis.py returns extracted_terms_enriched.json and cross_glossary_terms.json
+4. build_term_graph.py returns term_graph.json for visualizations
+5. Visualization scripts do their thing, returns .png and .pdf objects
+6. TODO (03/15/2026) fix the matching merging.py checks for the material hand-assembled from the preamble data in the glossaries, where some definitions live
+CHANGED TO add_glossary.py
+
+We fetch 36 Wikipedia math glossaries, cache wikitext, classify format and scope.
+
+Each glossary is assigned a parser based on markup pattern. Five methods due to idiosyncrasies of wiki material: 
+
+1. template (3,730)
+2. deflist (441)
+3. bold_bullet (198)
+4. bare_bold (147)
+5. deflist_anchor_alias (17)
+
+Wikilinks are decomposed into target and display text, stored as structured metadata. We are flagging for: is_stub, has_math, has_disambiguation, empty_definition. These are all necessary, as Wikipedia math glossaries are not (!) consistently structured. Three categories cause most of the difficulty: definition body; preamble material; html artifacts.
+
+The four markup formats (template, deflist, bold_bullet, bare_bold) are not interchangeable in what they surface. Template entries are the cleanest in which term and definition are explicitly delimited. Deflist and bold variants require on-site heuristic boundary detection; definition text is messy, and may bleed into prose, section transitions, or even cross-references with no reliable terminator. bare_bold assumes line-start position as the only signal, which breaks when formatting is inconsistent within a single glossary.
+
+Some glossaries open with running prose that defines foundational terms before the structured glossary body begins. These definitions are invisible to the main parsers, which expect headword-anchored entries. They are handled separately (merge_preambles.py) via hand-curation and merged post-extraction with deduplication against the main term list. This is a manual step and will not scale to new glossaries without review.
+
+Note: some several issues found during development: 
+
+- html comments embedded in wikitext caused double-counting of terms (found and fixed during count verification)
+- anchor aliases like `{{anchor|...}}` tags within deflist entries created a 20-term gap in the mathematical jargon glossary that required a dedicated extraction method (deflist_anchor_alias)
+- LaTeX math markup (`<math>...</math>`) is preserved as-is and flagged but not parsed
+- definitions heavy in notation are structurally present but semantically opaque to any later text-based processing
+- parenthetical qualifiers like (algebra) or (set theory) appear inconsistently, sometimes as part of the headword, sometimes as disambiguation prose, which affects both extraction boundary detection and normalization behavior in deduplication
+
+Terms are grouped by normalized form (lowercase, articles stripped, parentheticals removed). Cross-glossary relationships are classified: identical (threshold of >0.85 similarity), overlapping (threshold of >0.5), complementary (low similarity, different perspective), stub_vs_full. Enriched output appends this metadata to every term record.
+
+Three edge types: definitional dependency (wikilink in definition A resolves to term B in corpus), stub cross-reference (\"see X\" stubs), cross-glossary identity (same normalized term resolving to distinct nodes due to parenthetical qualifiers, rare in practice, since most cross-glossary groups collapse to one node). Graph is sparse by construction: edges form only when a wikilink target is itself a corpus headword. Most wikilinks resolve outside the 36 glossaries and produce isolates.
+
+Degree distribution (on a log-log scatter), cross-area edge density heatmap, edge type composition (global and per-area), component size distribution, five network plots: top-k degree backbone; per-area subgraph; ego network; full plate of spaghetti.
+
+Consider the merging.py: reconciles the extracted term list against our compiled spreadsheet for the project. Normalize both sides (lowercase, accent-stripped, whitespace-collapsed), repair Mac Roman mojibake, append unmatched terms as new rows, flag encoding-repaired entries. Note: assumes both inputs are xlsx.
+
+Visualization scripts are static and do not scale well for dense areas. Deduplication normalization is blunt: parenthetical stripping causes false collisions. Graph sparsity limits the utility of graph-based pair sampling.
+
+TODO: fix this. CHANGED TO add_glossary.py
+Some results of after using merging:
+
+Original rows:         38001
+Extracted terms:       4533
+Matched:               1359
+Unmatched (appended):  2563
+  encoding-repaired:   177
+Final rows:            40564
+
+Some terms not contained in the group's documentation are worthwhile. I advise a human audit over these terms. There are many names that are part of terms in the glossary, which should be checked. See the unmatched_report of such items.
+
