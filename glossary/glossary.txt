@@ -1,3 +1,5 @@
+Daniel Quigley's description:
+
 Here is the implementation pipeline. The idea is to run offline after one network call; everything else simply reads the cached files.
 
 
