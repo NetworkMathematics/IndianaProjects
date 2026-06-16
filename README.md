@@ -10,7 +10,7 @@ Our data:
   * [goldilock sentences](https://github.com/vcvpaiva/NLIMath/blob/main/436sentences.txt) (433 sentences)
   * [all sentences](https://github.com/vcvpaiva/NLIMath/blob/main/3k_tac.txt) (actually 2930 sentences)
 * [nLab](https://github.com/ToposInstitute/nlab-corpus) corpus (up to 2020) ~175K sentences
-* [Chicago Notes]()
+* [Chicago Notes](https://github.com/vcvpaiva/Lucy/blob/main/BasicGlossary/chicagonotes.txt) a version of Chicago notes as a single .txt file with 1335 sentences
 * MathNLI corpora:
   * [Seed corpus](https://github.com/vcvpaiva/NLIMath/blob/main/NLIcorpora/SeedNLI%20corpus%20-%20Sheet1.csv)
   * [GPT4-generated NLI pairs](https://github.com/vcvpaiva/NLIMath/blob/main/NLIcorpora/GPT4-NLI%20corpus%20-%20Sheet1.csv)
