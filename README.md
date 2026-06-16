@@ -62,4 +62,6 @@ Our data is in the spreadsheets https://docs.google.com/spreadsheets/d/1jLzuvuaL
    * for all alpha in N, functions that are the pointwise limit of a sequence of functions of Baire class less than  alpha are Baire-alpha.
 
 These two definitions seem equivalent to me, but I don't actually know if they are. Math needs to be precise, but we want a human-like definition, not a totally formal one, as this commits us to a particular formalization.
+
+We're pursuing "clustering" of concepts.
  
