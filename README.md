@@ -30,4 +30,9 @@ Our data is in the spreadsheets https://docs.google.com/spreadsheets/d/1jLzuvuaL
 
  A static version is in the directory [TermsDB](https://github.com/NetworkMathematics/TermsDB/blob/main/README.md).
 
+ We ended up with too many concepts extracted by the LLMs which we could not find in the human-curated resources.
+ There were two reasons for that: 1. we're extracting concepts from papers in research mathematics, so the human-curated resources we bound to lag behind: too many new concepts won't make it to the canon of mathematics. LLMs could only extract terms that looked like mathematics.
+ 2. If we changed the corpus to have a golden notion of concept and its definition, it should be easier to establish a kernel of guaranteed concepts. So we changed the corpus to Lucy Horowitz "Chicago Notes". This is a shorter corpus only 611 sentences and have mathematical concepts attached to it-- it's a basic glossary. 
+ 
+ However, this did not work for us either, because different mathematicians write concepts in different ways.
  
