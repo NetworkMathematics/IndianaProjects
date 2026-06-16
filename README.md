@@ -31,9 +31,31 @@ Our data is in the spreadsheets https://docs.google.com/spreadsheets/d/1jLzuvuaL
 
  A static version is in the directory [TermsDB](https://github.com/NetworkMathematics/TermsDB/blob/main/README.md).
 
- We ended up with too many concepts extracted by the LLMs which we could not find in the human-curated resources.
- There were two reasons for that: 1. we're extracting concepts from papers in research mathematics, so the human-curated resources we bound to lag behind: too many new concepts won't make it to the canon of mathematics. LLMs could only extract terms that looked like mathematics.
- 2. If we changed the corpus to have a golden notion of concept and its definition, it should be easier to establish a kernel of guaranteed concepts. So we changed the corpus to Lucy Horowitz "Chicago Notes". This is a shorter corpus only 611 sentences and have mathematical concepts attached to it-- it's a basic glossary. 
+ ### Issues
  
- However, this did not work for us either, because different mathematicians write concepts in different ways.
+ We ended up with too many concepts extracted by the LLMs which we could not find in the human-curated resources.
+ 
+ There were two reasons for that:
+ 1. we're extracting concepts from papers in research mathematics, so the human-curated resources were bound to lag behind:
+    too many new concepts won't make it to the canon of mathematics. LLMs could only extract terms that `looked like' mathematics, things like ``associative magma" were considered concepts.
+    
+ 2. If we changed the corpus to have a golden notion of concept and its definition, it should be easier to establish a kernel of guaranteed concepts.
+    
+ 3. So we changed the corpus to Lucy Horowitz's "Chicago Notes". This is a shorter corpus only 1335 sentences and have mathematical concepts attached to it -- it's a basic glossary. It could work as a basic, golden standard seed for our glossary.
+ 
+ However, this did not work either, because different mathematicians write concepts in different ways. 
+ 
+ For example, [MathGloss](https://mathgloss.github.io/MathGloss/web/) has 
+ 
+ *Baire function* (functions obtained from continuous functions by transfinite iteration of the operation of forming pointwise limits of sequences of functions) in Wikidata. 
+ 
+ But Chicago Notes has:
+ 
+ Definition: The *Baire classes of continuous real-valued functions* on a topological space are defined as follows:
+
+   * continuous functions are Baire-0;
+   * functions that are the pointwise limit of a sequence of continuous functions are Baire-1;
+   * for all alpha in N, functions that are the pointwise limit of a sequence of functions of Baire class less than  alpha are Baire-alpha.
+
+These two definitions seem equivalent to me, but I don't actually know if they are. Math needs to be precise, but we want a human-like definition, not a totally formal one, as this commits us to a particular formalization.
  
