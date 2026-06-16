@@ -22,28 +22,32 @@ Our prototype for annotation:
 
 ## Toward a Machine-Readable Database of Categorical Terms
 
-or Lessons from Large Language Models and Human-Curated Resources
+(Lessons from Large Language Models and Human-Curated Resources)
 
-We're completing a database of terms of Category Theory, extracted from the TAC corpus above.
+We're completing a database of terms of Category Theory, extracted from the TAC/Chicago notes corpora above.
 
 Our data is in the spreadsheets https://docs.google.com/spreadsheets/d/1jLzuvuaLIcRTIQPwQ65fL3o9gzasplJ52eEUFJhhMSk/edit?gid=105714284#gid=105714284 and
+
  https://docs.google.com/spreadsheets/d/1yy3NjhP0mj75ws0k3qnCbFCI-giSHCqVwUW_8CGblEQ/edit?usp=sharing
 
  A static version is in the directory [TermsDB](https://github.com/NetworkMathematics/TermsDB/blob/main/README.md).
 
  ### Issues
  
- We ended up with too many concepts extracted by the LLMs which we could not find in the human-curated resources.
+ We end up with too many concepts extracted by the LLMs, which we could not find in the human-curated resources.
  
  There were two reasons for that:
- 1. we're extracting concepts from papers in research mathematics, so the human-curated resources were bound to lag behind:
-    too many new concepts won't make it to the canon of mathematics. LLMs could only extract terms that `looked like' mathematics, things like ``associative magma" were considered concepts.
-    
- 2. If we changed the corpus to have a golden notion of concept and its definition, it should be easier to establish a kernel of guaranteed concepts.
-    
- 3. So we changed the corpus to Lucy Horowitz's "Chicago Notes". This is a shorter corpus only 1335 sentences and have mathematical concepts attached to it -- it's a basic glossary. It could work as a basic, golden standard seed for our glossary.
  
- However, this did not work either, because different mathematicians write concepts in different ways. 
+ 1. We were extracting concepts from papers in research mathematics, so the human-curated resources were bound to lag behind:
+    (too many new concepts won't make it to the canon of mathematics).
+
+    LLMs could only extract terms that `looked-like' mathematics, things like ``associative magma" were considered concepts.
+    
+ 2. If we changed the corpus to have a golden notion of concept and its definition, it should be easier to establish a kernel of guaranteed concepts, right?
+    
+ 3. We changed the corpus to Lucy Horowitz's "Chicago Notes". This is a shorter corpus, only 1335 sentences which have mathematical concepts attached to it -- it's a basic glossary. It should work as a basic, golden standard seed for our glossary.
+ 
+ However, this does not work directly either, because different mathematicians write concepts in different ways. 
  
  For example, [MathGloss](https://mathgloss.github.io/MathGloss/web/) has 
  
