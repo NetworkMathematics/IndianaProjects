@@ -1,16 +1,19 @@
-# MathGloss Chicago Concept Extraction Summary
+# MathGloss-Chicago Concept Extraction Experiment Summary
 
 ## Setting
 
-We want to test how good the LLM pipeline + wikidata grounding is. Previously we had a mismatch between the corpus we used to extract the concepts (the 450 lines "chicago_mappings.csv") and the "ground truth" human annotated set of concpets (only 395 terms; the source sentences of this set of concepts is unknown).
+We want to check how good our "LLM + wikidata grounding" pipeline for concept extraction from mathematical text is.
 
-We noticed that there are 611 markdown files under the "Chicago" folder and each file is defining a concept with concepts in the definition sentences marked with hyperlinks to Mathgloss. So from there we can get a seemingly "ground truth" set of concepts that can be extracted from these 611 sentences (i.e., the terms that are defined + the terms with hyperlink in the definition sentences). And this is the source corpus that we are using this time:
+Previously, we had a mismatch between the corpus we used to extract the concepts (the 450 lines "chicago_mappings.csv") and the "ground truth" human-annotated set of concepts we considered. 
+We had only 395 terms, extracted from https://mathgloss.github.io/MathGloss/web/, restricting ourselves to the Chicago source only.  (Bert, do you know which ones are the 55 concepts that are in chicago_mappings.csv, but not in the spreadsheet under Chicago? Presumably these are math concepts in Chicago notes that do not have WikiData correspondents).
+
+We noticed that there are 611 markdown files in the "Chicago" data folder (https://github.com/MathGloss/MathGloss/tree/main/chicago) and each file defines a concept, but with concepts in the definition sentences marked with hyperlinks to MathGloss. So from there we can get a seemingly "ground truth" set of concepts that can be extracted from these 611 sentences (i.e., the terms that are defined + the terms with a hyperlink in the definition sentences). And this is the source corpus that we are using this time:
 
 - Source markdown folder: [MathGloss/chicago/](https://github.com/MathGloss/MathGloss/tree/main/chicago)
 - Extracted sentence corpus formed from the above markdown files: [data/mathgloss_chicago_definition_sentences.txt](https://drive.google.com/file/d/1pyEG4Q_fLb3IzxKx0CaolNfKVKA0gOtP/view?usp=drive_link)
 - Sentence metadata CSV: [data/mathgloss_chicago_definition_sentences.csv](https://docs.google.com/spreadsheets/d/1cKQ4N0DxcgQ9tlbmdHPfBs1qwjPCvYIvjmUKr6fgU-I/edit?gid=108875846#gid=108875846)
 
-The corpus contains 611 markdown pages. Each input sentence is the page title followed by its definition text, e.g. `Abelian Group: ...`.
+The corpus contains 611 Markdown pages. Each input sentence is the page title followed by its definition text, e.g. `Abelian Group: ...`.
 
 ## Machine Extraction
 
@@ -18,13 +21,13 @@ We ran the 3-LLM extraction pipeline with UD parsing given as part of the contex
 
 - Combined concept CSV: [outputs/mathgloss_chicago_definitions_udep/mathgloss_chicago_definitions_udep_combined_concepts.csv](https://docs.google.com/spreadsheets/d/1cKQ4N0DxcgQ9tlbmdHPfBs1qwjPCvYIvjmUKr6fgU-I/edit?gid=598315717#gid=598315717)
 
-The all-model-agreed machine set has 911 terms.
+Then we investigated which concepts all LLMs agreed on. The all-model-agreed machine set has 911 terms.
 
 ## Grounding Step
 
 We grounded only the terms agreed on by all three LLMs.
 
-- Grounded agreed-term CSV: [outputs/mathgloss_chicago_definitions_udep_grounded_llm/mathgloss_chicago_definitions_udep_agreed_grounded_llm.csv](https://docs.google.com/spreadsheets/d/1rdqz7vqddWr-msEab0rewEzeSSTJ6db4aKSM60C5f4E/edit?gid=967311553#gid=967311553)
+- Grounded agreed-terms CSV: [outputs/mathgloss_chicago_definitions_udep_grounded_llm/mathgloss_chicago_definitions_udep_agreed_grounded_llm.csv](https://docs.google.com/spreadsheets/d/1rdqz7vqddWr-msEab0rewEzeSSTJ6db4aKSM60C5f4E/edit?gid=967311553#gid=967311553)
 
 After retrying transient Wikidata/Wikipedia failures, the grounded set has 622 terms. There are no remaining `search failed` or HTTP 429 rows.
 
@@ -62,3 +65,4 @@ Current summary:
 - Ground truth missing from grounded: 554
 - Grounded outside ground truth: 214
 
+[vcvp] more than the numbers, it would be good to know the terms in each of the items above. to see if it's a different concept idealization between Wikidata and Chicago Notes or if the differences are between the LLMs and Wikidata or something else.
