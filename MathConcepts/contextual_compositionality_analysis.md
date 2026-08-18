@@ -1,4 +1,5 @@
 # Contextual Compositionality Analysis
+Soren DeHaan, 17th August 2026
 
 Briefly: I anticipated that a term that can be expressed as a simple combination of its component words is a less useful term. So I made a measure of compositionality, and compared it to a couple of other metrics of quality we have. There was generally a correlation, as expected, though with some nuance of context.
 
