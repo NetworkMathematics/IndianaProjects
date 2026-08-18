@@ -6,6 +6,7 @@ Briefly: I anticipated that a mathematical term that can be expressed as a simpl
 ## Data
 
 We have three datasets:
+The first datase is available at this Google [spreasheet](https://docs.google.com/spreadsheets/d/1jLzuvuaLIcRTIQPwQ65fL3o9gzasplJ52eEUFJhhMSk/edit?gid=105714284#gid=105714284). 
 
 1. **v4_combined**: a binary dataset, where for each term, each of the 3 LLMs was given a 1 if it considered the term a mathematical concept, and 0 otherwise. Similarly, each of 4 human corpora (nlab, planetmath, wikidata, tac-corpus) was given a 1 if the term was found in the corpus, and 0 otherwise. The v4_combined dataset was tested on all terms for which at least one LLM had a 1.
 2. **0624-chicago_mappings_agreed_grounded_llm**: this dataset only includes terms which all 3 LLMs identified as a mathematical concept, but also includes which sentence each LLM identified, taken from the Chicago corpus. Additionally, an LLM (which?) evaluated the top 20 matching Wikidata pages: if any seemed to be the concept at hand, the term was marked `grounded,` and `rejected` otherwise.
