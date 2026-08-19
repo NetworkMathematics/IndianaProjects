@@ -1,5 +1,15 @@
 # MathGloss-Chicago Concept Extraction Experiment Summary
 
+**[Update of 08/18]**: 
+
+The 611 terms + definitions as the source corpus is added to [data/mathgloss_chicago_definitions_611terms.txt](https://github.com/NetworkMathematics/IndianaProjects/blob/main/MathConcepts/data/mathgloss_chicago_definitions_611terms.txt). Each sentence is formatted as "[term]: [definition (may contain multiple of sentences)]".
+
+The "ground-truth" set of concepts from the above 611 terms corpus is in [data/mathgloss_chicago_ground_truth_611terms.txt](https://github.com/NetworkMathematics/IndianaProjects/blob/main/MathConcepts/data/mathgloss_chicago_definitions_611terms.txt). There are **962 terms** there and they are from the 611 terms being defined and all the hyperlinked terms in the definition markdown files.
+
+By adding wikipedia as another source to ground the terms + fuzzy search on wikidata/wikipedia on the extracted terms + searching with "[term] + math" when the terms has many wikidata/wikipedia pages + some other tricks, we have a 2nd version of grounding and it now has 832/911 terms being grounded. The overall spreadsheet is in [here](https://docs.google.com/spreadsheets/d/1WmFPND-U0PuxyfCnyr6m2TETOaqCAwJb9RJFMxa1Djk/edit?gid=1056407071#gid=1056407071)
+
+
+
 ## Setting
 
 We want to check how good our "LLM + wikidata grounding" pipeline for concept extraction from mathematical text is.
