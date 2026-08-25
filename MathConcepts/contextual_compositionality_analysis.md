@@ -5,20 +5,15 @@ Briefly: I anticipated that a mathematical term that can be expressed as a simpl
 
 ## Data
 
-We have three datasets:
-The first dataset is available at this Google [spreasheet](https://docs.google.com/spreadsheets/d/1jLzuvuaLIcRTIQPwQ65fL3o9gzasplJ52eEUFJhhMSk/edit?gid=105714284#gid=105714284). Need to explain where it comes from.
-
-1. **v4_combined**: a binary dataset, where for each term, each of the 3 LLMs was given a 1 if it considered the term a mathematical concept, and 0 otherwise. Similarly, each of 4 human corpora (nlab, planetmath, wikidata, tac-corpus) was given a 1 if the term was found in the corpus, and 0 otherwise. The v4_combined dataset was tested on all terms for which at least one LLM had a 1.
-2. **0624-chicago_mappings_agreed_grounded_llm**: this dataset only includes terms which all 3 LLMs identified as a mathematical concept, but also includes which sentence each LLM identified, taken from the Chicago corpus. Additionally, an LLM (which?) evaluated the top 20 matching Wikidata pages: if any seemed to be the concept at hand, the term was marked `grounded,` and `rejected` otherwise.
-3. **Merged**: this dataset includes only terms which are found in both datasets, and contains the Chicago corpus context, the grounding, and the 4 human corpora.
+For proof of concept, I used several old datasets. The version in this database (that is- "data/mathgloss_chicago_611terms_with_compositionality.csv") is evaluated directly on the terms identified in "data/mathgloss_chicago_ground_truth_611terms.txt".
 
 ## Embedding
 
-Each mathematical term is embedded using `BAAI/bge-small-en-v1.5`. Three embedding conditions are evaluated independently:
+Each mathematical term is embedded using `BAAI/bge-small-en-v1.5`. Other embedding models could be used (especially one fine-tuned for mathematics), but I anticipate the basic context is sufficient for most. Three embedding conditions can be evaluated independently:
 
 1. **No context**: the term itself.
 2. **Basic context**: `In mathematics, <term>`.
-3. **Corpus context**: the term extracted from each associated Chicago-corpus sentence, using a window of five words on either side of the term. If an exact match for the term cannot be found in a sentence, that context is skipped.
+3. **Corpus context**: the term extracted from each associated Chicago-corpus sentence, using a window of five words on either side of the term. If an exact match for the term cannot be found in a sentence, that context is skipped. This is only used for datasets that include their associated corpus sentences, so is not in the current dataset.
 
 ## Compositionality
 
@@ -32,32 +27,12 @@ $$
 C = \cos(E_{term}, \operatorname{proj}_{A,B}(E_{term})).
 $$
 
-Higher scores indicate greater compositionality: the term embedding is more closely recoverable from its component embeddings. For a term with multiple valid splits, the highest-scoring split is retained. This naturally increases compositionality for longer terms, a confound which is controlled for later.
+Higher scores indicate greater compositionality: the term embedding is more closely recoverable from its component embeddings. For a term with multiple valid splits, the highest-scoring split is retained. This naturally increases compositionality for longer terms, a confound which can be separated out and controlled for later.
 
-For corpus contexts, the 3 models may or may not find different sentences. Duplicate sentences are discarded, then compositionality is computed separately for every distinct context. Context embeddings never interact with one another; the resulting scores are averaged only after the individual contexts have been evaluated.
+For datasets that include multiple corpus contexts, different models may or may not find different sentences. Duplicate sentences are discarded, then compositionality is computed separately for every distinct context. Context embeddings never interact with one another; the resulting scores are averaged only after the individual contexts have been evaluated.
 
 ## Analysis and Results
 
-### Human occurrence count
+To interpret the current results, I recommend looking at the basic_context_percentile column in "data/mathgloss_chicago_611terms_with_compositionality.csv". The higher this value, the more compositional it is, relative to other terms in the corpus. In general, a lower value indicates a term which is not easily expressed as a combination of its components, and a higher value means the term is more directly derived from its components. Thus, I expect _lower values_ to correspond with _preferred terms_.
 
-Compositionality was compared across terms with 0 to 4 occurrences in human corpora from the v4_combined dataset. This was performed for all terms, as well as separately for terms of 2, 3, or 4+ words. This was done for both the no-context case, and the basic context case.
-
-Low compositionality was positively correlated with greater frequency in human corpora for both contexts. The effect size was strongest when all terms were included, since longer terms are both more compositional, and less likely to occur in human corpora. However, the results remained statistically significant for bigrams. 3-grams, and especially 4-grams, became increasingly skewed away from human corpora.
-
-### Grounded and rejected
-
-Compositionality was compared across terms marked as `grounded` or `rejected` in the Chicago dataset. This was performed for all 3 contexts.
-
-Low compositionality was positively correlated with grounding, except in the basic context case. In the basic context case, components which have common use outside of mathematics were more significantly benefitted (as this context only clarifies that it should be taken in a mathematical context), but components which have common use are also those for which their mathematical use were more likely to be after the first 20 Wikidata entries, and thus were more likely to be false negatives. Thus, the basic context case disproportionately altered compositionality for both true positives and false negatives, eliminating the effect.
-
-Additionally, human corpora occurrence counts were compared between `grounded` and `rejected` terms. There was an unsurprising correlation between grounded terms and human corpora occurrence.
-
-### Cross-context
-
-Compositionality was compared across the three context conditions using the Chicago dataset, to determine which terms are affected by which contexts:
-
-- no context vs. basic context
-- no context vs. corpus context
-- basic context vs. corpus context
-
-Items like `natural number,` `lie group`, and `partial order` were highly benefitted by basic context, which aligns with the explanation given above: words like `normal` and `group` are common outside of mathematical contexts, so adding even simple context greatly alters the compositionality. On the other hand, items like `homotopy equivalent` saw minimal change, as both component words are strongly associated with mathematics already.
+To quantitatively evaluate this, we'll need to compare the scores against another metric, and see if there's useful correlation. In the past, I measured against a dataset which included human corpus occurrence rate, and saw expected correlation, but the current dataset does not have that metric. As a result, analysis is ongoing.
