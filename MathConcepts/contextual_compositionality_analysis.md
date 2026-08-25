@@ -24,7 +24,7 @@ For each context, compositionality is computed using binary partitions of multi-
 For a term split into components $A$ and $B$, the component embeddings are computed in the same context as the original term. The full-term embedding is projected onto the linear basis spanned by the two component embeddings. The score is based on the cosine similarity between the full-term embedding and its projection:
 
 $$
-C = \cos(E_{term}, \operatorname{proj}_{A,B}(E_{term})).
+C = \cos(E_{term}, \mathop{\text{proj}}_{A,B}(E_{term})).
 $$
 
 Higher scores indicate greater compositionality: the term embedding is more closely recoverable from its component embeddings. For a term with multiple valid splits, the highest-scoring split is retained. This naturally increases compositionality for longer terms, a confound which can be separated out and controlled for later.
