@@ -1,5 +1,11 @@
 # MathGloss-Chicago Concept Extraction Experiment Summary
 
+
+**[Update of 09/01]**:
+
+The mismatch between the 395 terms in the txt file and the chicago mappings csv is listed [here](https://docs.google.com/spreadsheets/d/1WmFPND-U0PuxyfCnyr6m2TETOaqCAwJb9RJFMxa1Djk/edit?gid=235099035#gid=235099035). In summary, there are 271 terms overlapped; 124 terms only in the 395 terms txt file and 173 terms only in the Chicago mappings.
+
+
 **[Update of 08/18]**: 
 
 The 611 terms + definitions as the source corpus is added to [data/mathgloss_chicago_definitions_611terms.txt](https://github.com/NetworkMathematics/IndianaProjects/blob/main/MathConcepts/data/mathgloss_chicago_definitions_611terms.txt). Each sentence is formatted as "[term]: [definition (may contain multiple of sentences)]".
