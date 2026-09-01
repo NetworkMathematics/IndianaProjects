@@ -3,7 +3,7 @@
 
 **[Update of 09/01]**:
 
-The mismatch between the 395 terms in the txt file and the chicago mappings csv is listed [here](https://docs.google.com/spreadsheets/d/1WmFPND-U0PuxyfCnyr6m2TETOaqCAwJb9RJFMxa1Djk/edit?gid=235099035#gid=235099035). In summary, there are 271 terms overlapped; 124 terms only in the 395 terms txt file and 173 terms only in the Chicago mappings.
+The mismatch between the 395 terms in the [txt file](https://github.com/NetworkMathematics/IndianaProjects/blob/main/MathConcepts/data/MathGlossChicagoConcepts.txt) and the [chicago mappings csv](https://github.com/NetworkMathematics/IndianaProjects/blob/main/MathConcepts/data/chicago_mappings.csv) is listed [here](https://docs.google.com/spreadsheets/d/1WmFPND-U0PuxyfCnyr6m2TETOaqCAwJb9RJFMxa1Djk/edit?gid=235099035#gid=235099035). In summary, there are 271 terms overlapped; 124 terms only in the 395 terms txt file and 173 terms only in the Chicago mappings.
 
 
 **[Update of 08/18]**: 
