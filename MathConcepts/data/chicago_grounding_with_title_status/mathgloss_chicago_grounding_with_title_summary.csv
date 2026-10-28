@@ -1,0 +1,10 @@
+metric,count
+three_model_agreement_terms,911
+pipeline_grounded,622
+chicago_title_grounded_in_agreement_set,430
+grounded_by_both,313
+pipeline_grounded_only,309
+chicago_title_grounded_only,117
+overall_grounded_union,739
+remaining_ambiguous,1
+remaining_rejected,171
